@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>      
+  <session-factory>
+    <!-- Database connection settings -->
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://mis-sql.uhcl.edu/drlin?useSSL=false</property>
+    <property name="connection.username">drlin</property>
+    <property name="connection.password">2019drlin</property>
+    <property name="show_sql">true</property>
+     
+    <mapping class="UHCLSystem.uhcluser" />
+    <mapping class="UHCLSystem.Course" />
+    <mapping class="UHCLSystem.Enrollment" />
+    <mapping class="UHCLSystem.CourseNote" />
+    
+  </session-factory>
+</hibernate-configuration>
